@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CNN Image Prediction Tool</title>
+    <title>Flowers Classifier</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
   </head>
 
   <body>
     <div class="header">
-      <h1><span>Image Prediction Tool</span> with Django</h1>
+      <h1><span>Flowers Classification</span> and Prediction</h1>
     </div>
 
     <form method="POST" enctype="multipart/form-data">
@@ -24,7 +24,7 @@
         id="file"
       />
       <button class="compress_image" type="submit" id="submitBtn">
-        Predict Animal
+        Predict Flower
       </button>
       <div class="status">
         <p id="message">{{ message }}</p>
@@ -47,7 +47,7 @@
     </div>
 
     <div class="header">
-      <h4><span>Tensored </span>Django</h4>
+      <h4><span>Flowers </span>Classifier</h4>
     </div>
 
     <script src="{% static 'js/main.js' %}"></script>
