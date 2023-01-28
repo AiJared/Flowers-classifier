@@ -31,7 +31,7 @@ def index(request):
         # Read the image
         imag=cv2.imread(path)
         img_from_ar = Image.fromarray(imag, 'RGB')
-        resized_image = img_from_ar.resize((50, 50))
+        resized_image = img_from_ar.resize((180, 180))
 
         test_image =np.expand_dims(resized_image, axis=0) 
 
