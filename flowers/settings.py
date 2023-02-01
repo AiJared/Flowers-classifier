@@ -10,7 +10,7 @@ environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATABASE_URL = ""
+DATABASE_URL = "postgresql://postgres:reYgq1Q5LoVv8yZZJxbE@containers-us-west-173.railway.app:8057/railway"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -69,14 +69,7 @@ WSGI_APPLICATION = "flowers.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "flowersDB",
-        'USER': "postgres",
-        'PASSWORD': "Ja@259779",
-        "HOST": "localhost",
-        'PORT': "5432"
-    }
+    'default':dj_database_url.config(default=DATABASE_URL, conn_max_age=1800) 
 }
 
 
