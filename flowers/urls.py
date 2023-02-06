@@ -1,11 +1,10 @@
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
-from classifier.views import index
+from django.urls import path, include
 
 urlpatterns = [
-    path("", index, name="index"),
+    path('', include("classifier.urls", namespace="classifier")),
     path("admin/", admin.site.urls),
 ]
 
