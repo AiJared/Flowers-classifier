@@ -66,5 +66,5 @@ for x in tulips:
 flowers=np.array(data)
 labels=np.array(labels)
 # 
-np.save("animals",flowers)
+np.save("flowers",flowers)
 np.save("labels",labels)
